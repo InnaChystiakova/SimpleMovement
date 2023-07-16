@@ -26,9 +26,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        movementView.center.x = view.center.x
-        movementView.center.y = view.center.y
-        movementView.frame.size = CGSize(width: side, height: side)
+        movementView.frame = CGRect(
+            x: view.frame.size.width/2 - side/2,
+            y: view.frame.size.height/2 - side/2,
+            width: side,
+            height: side)
         movementView.backgroundColor = .systemMint
         movementView.layer.cornerRadius = radius
         view.addSubview(movementView)
